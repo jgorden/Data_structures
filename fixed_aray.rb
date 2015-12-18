@@ -1,19 +1,19 @@
 class FixedArray
-	attr_reader :array
+  attr_reader :array
 
-	def new(size)
-		@array = Array.new(size)
-	end
+  def new(size)
+  	@array = Array.new(size)
+  end
 
-	def get(index)
-		raise 'OutOfBoundsException' if index > @array.length - 1
-		@array[index]
-	end
+  def get(index)
+  	raise 'OutOfBoundsException' if index > @array.length - 1
+  	@array[index]
+  end
 
-	def set(index, element)
-		raise 'OutOfBoundsException' if index > @array.length - 1
-		@array[index] = element
-	end
+  def set(index, element)
+  	raise 'OutOfBoundsException' if index > @array.length - 1
+  	@array[index] = element
+  end
 end
 
 a = FixedArray.new
