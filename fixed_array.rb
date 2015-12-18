@@ -14,11 +14,15 @@ class FixedArray
     raise 'OutOfBoundsException' if index > @array.length - 1
     @array[index] = element
   end
+
+  def length
+    @array.length
+  end
 end
 
-a = FixedArray.new
-a.new(3)
-p a.array
-a.set(0, 'hey')
-p a.get(0)
-p a.array
+# a = FixedArray.new
+# a.new(3)
+# p a.array
+# a.set(0, 'hey')
+# p a.get(0)
+# p a.array
