@@ -2,17 +2,17 @@ class FixedArray
   attr_reader :array
 
   def new(size)
-  	@array = Array.new(size)
+    @array = Array.new(size)
   end
 
   def get(index)
-  	raise 'OutOfBoundsException' if index > @array.length - 1
-  	@array[index]
+    raise 'OutOfBoundsException' if index > @array.length - 1
+    @array[index]
   end
 
   def set(index, element)
-  	raise 'OutOfBoundsException' if index > @array.length - 1
-  	@array[index] = element
+    raise 'OutOfBoundsException' if index > @array.length - 1
+    @array[index] = element
   end
 end
 
