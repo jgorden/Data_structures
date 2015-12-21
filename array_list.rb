@@ -3,25 +3,19 @@ require './fixed_array'
 class ArrayList
   attr_reader :array
 
-  def initialize
-    @array = FixedArray.new
-  end
-
-  def new(size)
-    @array.new(size)
+  def initialize(size)
+    @array = FixedArray.new(size)
   end
 
   def add(element)
-    new_array = FixedArray.new
-    new_array.new(@array.length + 1){|index| new_array[index] = @array[index] }
+    new_array = FixedArray.new(@array.length + 1){|index| new_array[index] = @array[index] }
     new_array.set(-1, element)
     @array = new_array
     element
   end
 
   def insert(index, element)
-    new_array = FixedArray.new
-    new_array.new(@array.length + 1)
+    new_array = FixedArray.new(@array.length + 1)
     old_count = 0
     new_count = 0
     while old_count < @array.length
@@ -52,8 +46,7 @@ class ArrayList
   end
 end
 
-a = ArrayList.new
-p a.new(3)
+a = ArrayList.new(3)
 p a.size
 p a.add('hey')
 p a.get(0)

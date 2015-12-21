@@ -1,7 +1,7 @@
 class FixedArray
   attr_reader :array
 
-  def new(size)
+  def initialize(size)
     @array = Array.new(size)
   end
 
@@ -20,8 +20,7 @@ class FixedArray
   end
 end
 
-# a = FixedArray.new
-# a.new(3)
+# a = FixedArray.new(3)
 # p a.array
 # a.set(0, 'hey')
 # p a.get(0)
