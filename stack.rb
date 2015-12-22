@@ -19,3 +19,13 @@ class Stack
     @stack.empty?
   end
 end
+
+a = Stack.new
+p a.empty?
+a.push(1)
+p a.top
+a.push(2)
+p a.top
+a.pop
+p a.top
+p a.empty?
