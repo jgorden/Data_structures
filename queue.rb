@@ -9,7 +9,7 @@ class Queue
   end
 
   def dequeue(element)
-    @queue.shift
+    @queue.pop
   end
 
   def peel
